@@ -1,10 +1,70 @@
-# Community skills: 3D design, games and simulation
+# Community skills: design, 3D, games and simulation
 
-These skills were copied from other people's open-source GitHub repos into this one. They cover the jobs Fusion 360-style CAD software does (designing parts to 3D print), building 3D games, and simulating robots. Each one is described below in plain English, with an example of what you could ask for and how it could be used in class.
+These skills were copied from other people's open-source GitHub repos into this one. They cover **web and UI design**, the jobs Fusion 360-style CAD software does (designing parts to 3D print), building 3D games, and simulating robots. Each one is described below in plain English, with an example of what you could ask for and how it could be used in class.
 
-> **Before you use them:** community skills are written by individuals, not Anthropic. Read the `SKILL.md` and any scripts in a folder before using it on school machines. Most need Python or other free tools installed. They work best in **Claude Code**. In the Claude app you can upload a skill's folder as a custom skill.
+> **Before you use them:** community skills are written by individuals (or companies), not Anthropic. Read the `SKILL.md` and any scripts in a folder before using it on school machines. Most need Python, Node, or other free tools installed. They work best in **Claude Code**. In the Claude app you can upload a skill's folder as a custom skill.
 >
 > **Fusion 360 itself:** Claude has an official **Autodesk Fusion connector** (and one for Blender), so it doesn't need a skill. In Fusion, turn it on under *Preferences → General → API → Fusion MCP Server*, then connect it in the Claude desktop app.
+
+---
+
+## Web and UI design
+
+These were added in November 2026 from a list of design-focused repos. They help Claude build good-looking, accessible web pages and app interfaces instead of generic "AI-looking" ones. Several overlap on purpose — try one, and swap if it doesn't suit. They're most useful for the ICT/web-design side of Digital Technologies, student project websites, slide decks and posters.
+
+> **Heads-up on what some of these need:**
+> - **`astryx`** needs its npm packages and CLI installed (`npm i -g @astryxdesign/cli`, plus `@astryxdesign/core` in the project).
+> - **`stitch`** (16 sub-skills under `skills/stitch/`) only works with **Google Stitch**, a hosted Google service — not much use without a Stitch account. Left in because you asked for it; delete the folder if you won't use Stitch.
+> - **`design`** (part of the ui-ux-pro-max set) can generate logos/icons via **paid AI services** (Gemini, Atlas Cloud, MuAPI). Those parts need API keys; the rest of the skill works without them.
+> - **`ui-styling`** bundles ~5 MB of fonts so it can do canvas design offline — that's why that folder is large.
+
+### `ui-ux-pro-max` and its set: `design`, `design-system`, `ui-styling`, `brand`, `banner-design`, `slides`
+**What they do:** A connected set of UI/UX design skills (80+ styles, colour palettes and font pairings). `ui-ux-pro-max` is the brain that reviews and fixes interfaces; `design` is the all-in-one (brand, tokens, logos, banners, presentations); `design-system` builds design tokens; `ui-styling` does shadcn/Tailwind/canvas styling; `brand` handles voice and identity; `banner-design` makes social/ad/web/print banners; `slides` builds HTML presentations with charts.
+**Try asking:** *"Design a clean, accessible landing page for our school robotics club, give me three style options with matching fonts and colours."*
+**In class:** web-design units, student project sites, posters and classroom slide decks.
+**Licence:** MIT (Next Level Builder).
+
+### `impeccable`
+**What it does:** A design critic and polisher. Point it at a website, landing page, dashboard, app UI or component and it reviews, audits, polishes or animates it — the "never misses" design reviewer.
+**Try asking:** *"Critique this page's layout, spacing and typography, then fix the worst problems."*
+**In class:** teaching students to evaluate and improve their own interface designs against real design standards.
+**Licence:** Apache 2.0 (Paul Bakaus).
+
+### `hallmark`
+**What it does:** Builds new websites and pages that look deliberately designed rather than AI-generated — strong layout, type and detail from the start.
+**Try asking:** *"Build a one-page site introducing our Year 9 robot-mission project that doesn't look like a template."*
+**In class:** showing students the difference between a generic page and a crafted one.
+**Licence:** MIT (Nutlope / Hallmark contributors).
+
+### `shadcn`
+**What it does:** Adds, searches, fixes and composes **shadcn/ui** components (the popular React + Radix + Tailwind component library) in a project.
+**Try asking:** *"Add a dialog and a data table from shadcn/ui to this React app and wire them up."*
+**In class:** senior web/app development projects using React.
+**Needs:** a React/Tailwind project. **Licence:** MIT (shadcn).
+
+### `magic-ui`
+**What it does:** Adds and customises **Magic UI** animated components (moving buttons, marquees, effects) in React/Next.js projects, installed through the shadcn registry.
+**Try asking:** *"Add an animated gradient hero and a marquee of our sponsors to this Next.js page."*
+**In class:** adding polish and motion to student web projects.
+**Needs:** a React/Next.js project. **Licence:** MIT (Magic UI).
+
+### `leonardo-colors`
+**What it does:** Generates accessible colour palettes with Adobe's Leonardo tool and checks them against WCAG contrast rules, so text stays readable.
+**Try asking:** *"Make an accessible colour theme around teal that passes WCAG AA for normal text."*
+**In class:** teaching colour contrast and accessibility — a real, checkable standard students can aim for.
+**Licence:** Apache 2.0 (Adobe).
+
+### `astryx`
+**What it does:** Builds and themes UI using Meta's open **Astryx** design system and component library.
+**Try asking:** *"Set up Astryx in this project and build a settings screen using its components."*
+**In class:** senior projects, as an example of a professional design system.
+**Needs:** the Astryx npm packages and CLI (see heads-up above). **Licence:** MIT (Meta).
+
+### `stitch` (16 sub-skills — needs Google Stitch)
+**What it does:** A pipeline of skills for **Google Stitch**: turn a prompt into UI screens, extract a design system, and build them out as React, React Native, Vite dashboards or Remotion videos.
+**Try asking:** *"Using Stitch, turn this prompt into mobile app screens and export a DESIGN.md."*
+**In class:** only relevant if your school uses Google Stitch.
+**Licence:** Apache 2.0 (Google Labs).
 
 ---
 
@@ -83,7 +143,22 @@ Start with **`threejs-game-director`**. It plans the game and calls on the other
 | mujoco | https://github.com/coolbeevip/mujoco-skills | MIT |
 | webots-* | https://github.com/bowtiedswan/webots-skills | MIT |
 | threejs-* | https://github.com/majidmanzarpour/threejs-game-skills | MIT |
+| ui-ux-pro-max, design, design-system, ui-styling, brand, banner-design, slides | https://github.com/nextlevelbuilder/ui-ux-pro-max-skill | MIT |
+| impeccable | https://github.com/pbakaus/impeccable | Apache 2.0 |
+| hallmark | https://github.com/Nutlope/hallmark | MIT |
+| shadcn | https://github.com/shadcn-ui/ui | MIT |
+| magic-ui | https://github.com/magicuidesign/magicui | MIT |
+| leonardo-colors | https://github.com/adobe/leonardo | Apache 2.0 |
+| astryx | https://github.com/meta/astryx | MIT |
+| stitch (16 skills) | https://github.com/google-labs-code/stitch-skills | Apache 2.0 |
 
 Copied in November 2026. To get the latest versions, check the source repos.
 
 **Also worth a look (not copied because it's very large):** https://github.com/gamedev-skills/awesome-gamedev-agent-skills has 66 game skills for Godot, Unity, Unreal, Roblox, pygame, Phaser and more, with a router that picks the right one (Apache 2.0).
+
+## What was suggested but NOT added, and why
+
+From the design lists, these were left out:
+
+- **Not actually skills — they're libraries, tools or apps with no `SKILL.md`, so there's nothing to "add" as a skill:** Tailwind CSS, shadcn/ui *(the library itself — but the `shadcn` skill that drives it WAS added)*, Lucide (icon set), Rough.js (hand-drawn graphics library), WebGL Fluid Simulation (a demo), Excalidraw and tldraw (drawing apps — tldraw ships skills, but only for developing tldraw itself), Figma Context MCP (an MCP server — connect it as a connector instead), and `rembg` (a Python background-removal tool — run it directly). `frontend-design` was already in this repo (identical to upstream), so it wasn't duplicated.
+- **Off-theme / not appropriate for a school skills collection:** `rea` (https://github.com/morluto/rea) — mostly skills for developing the REA product, plus a general binary/firmware reverse-engineering skill that bundles Frida and Ghidra; **reverse-skill** (https://github.com/zhaoxuya520/reverse-skill) and **PentAGI** (https://github.com/vxcontrol/pentagi) — offensive-security / exploitation toolkits (credential dumping, privilege escalation, container escape, automated penetration testing). These teach real attack techniques and don't belong in a general design/teaching skills repo, so they were not added.
