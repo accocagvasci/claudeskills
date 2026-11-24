@@ -24,7 +24,7 @@ Many skills in this repo are open source (Apache 2.0). We've also included the d
 **These skills are provided for demonstration and educational purposes only.** While some of these capabilities may be available in Claude, the implementations and behaviors you receive from Claude may differ from what is shown in these skills. These skills are meant to illustrate patterns and possibilities. Always test skills thoroughly in your own environment before relying on them for critical tasks.
 
 # Community skills: 3D design, games and simulation
-This copy also includes community skills for web and UI design (ui-ux-pro-max, impeccable, hallmark, shadcn, magic-ui, leonardo-colors, astryx, stitch), CAD and 3D printing, robot simulation (MuJoCo, Webots) and Three.js games. See [COMMUNITY-SKILLS.md](./COMMUNITY-SKILLS.md) for a plain-English guide to each one, with example prompts and classroom ideas.
+This copy also includes community skills for web and UI design (ui-ux-pro-max, impeccable, hallmark, shadcn, magic-ui, leonardo-colors, astryx), CAD and 3D printing, robot simulation (MuJoCo, Webots) and Three.js games. See [COMMUNITY-SKILLS.md](./COMMUNITY-SKILLS.md) for a plain-English guide to each one, with example prompts and classroom ideas.
 
 # Skill Sets
 - [./skills](./skills): Skill examples for Creative & Design, Development & Technical, Enterprise & Communication, and Document Skills
