@@ -1,6 +1,6 @@
 # Community skills: design, 3D, games and simulation
 
-These skills were copied from other people's open-source GitHub repos into this one. They cover **web and UI design**, the jobs Fusion 360-style CAD software does (designing parts to 3D print), building 3D games, and simulating robots. Each one is described below in plain English, with an example of what you could ask for and how it could be used in class.
+These skills were copied from other people's open-source GitHub repos into this one. They cover **web and UI design**, the jobs Fusion 360-style CAD software does (designing parts to 3D print), building 3D games, simulating robots, and reverse engineering compiled software. Each one is described below in plain English, with an example of what you could ask for and how it could be used in class.
 
 > **Before you use them:** community skills are written by individuals (or companies), not Anthropic. Read the `SKILL.md` and any scripts in a folder before using it on school machines. Most need Python, Node, or other free tools installed. They work best in **Claude Code**. In the Claude app you can upload a skill's folder as a custom skill.
 >
@@ -58,6 +58,16 @@ These were added in November 2026 from a list of design-focused repos. They help
 **Try asking:** *"Set up Astryx in this project and build a settings screen using its components."*
 **In class:** senior projects, as an example of a professional design system.
 **Needs:** the Astryx npm packages and CLI (see heads-up above). **Licence:** MIT (Meta).
+
+---
+
+## Reverse engineering
+
+### `reverse-engineer-anything`
+**What it does:** Uses the open-source REA toolset (built on mainstream tools like Frida and Ghidra) to analyse compiled software — native binaries, .NET/Java, Electron/JavaScript apps, firmware and browser targets. It works from shipped artifacts or runtime behaviour to explain how a feature works, compare versions, decompile code, or guide a rebuild.
+**Try asking:** *"Work out how this Electron app stores its settings and what its update check sends."*
+**Good for:** understanding and debugging your own software, interoperability, learning how things work under the hood, and defensive analysis. Legitimate dual-use — the same skills apply across research, security and curiosity.
+**Needs:** the REA tooling (the skill explains setup). **Licence:** MIT (morluto). *Only the general `reverse-engineer-anything` skill was taken; the repo's other `rea-*` skills are for maintaining the REA product itself and aren't included.*
 
 ---
 
@@ -143,6 +153,7 @@ Start with **`threejs-game-director`**. It plans the game and calls on the other
 | magic-ui | https://github.com/magicuidesign/magicui | MIT |
 | leonardo-colors | https://github.com/adobe/leonardo | Apache 2.0 |
 | astryx | https://github.com/meta/astryx | MIT |
+| reverse-engineer-anything | https://github.com/morluto/rea | MIT |
 
 Copied in November 2026. To get the latest versions, check the source repos.
 
@@ -154,4 +165,4 @@ From the design lists, these were left out:
 
 - **Not actually skills — they're libraries, tools or apps with no `SKILL.md`, so there's nothing to "add" as a skill:** Tailwind CSS, shadcn/ui *(the library itself — but the `shadcn` skill that drives it WAS added)*, Lucide (icon set), Rough.js (hand-drawn graphics library), WebGL Fluid Simulation (a demo), Excalidraw and tldraw (drawing apps — tldraw ships skills, but only for developing tldraw itself), Figma Context MCP (an MCP server — connect it as a connector instead), and `rembg` (a Python background-removal tool — run it directly). `frontend-design` was already in this repo (identical to upstream), so it wasn't duplicated.
 - **Needs a hosted vendor service:** `stitch` (https://github.com/google-labs-code/stitch-skills) — 16 well-built skills, but every one depends on **Google Stitch**, so they do nothing without a Stitch account. Left out to keep the collection usable out of the box; grab them from the source repo if you start using Stitch.
-- **Off-theme / not appropriate for a school skills collection:** `rea` (https://github.com/morluto/rea) — mostly skills for developing the REA product, plus a general binary/firmware reverse-engineering skill that bundles Frida and Ghidra; **reverse-skill** (https://github.com/zhaoxuya520/reverse-skill) and **PentAGI** (https://github.com/vxcontrol/pentagi) — offensive-security / exploitation toolkits (credential dumping, privilege escalation, container escape, automated penetration testing). These teach real attack techniques and don't belong in a general design/teaching skills repo, so they were not added.
+- **Offensive-security / exploitation toolkits — not added on safety grounds:** **reverse-skill** (https://github.com/zhaoxuya520/reverse-skill) and **PentAGI** (https://github.com/vxcontrol/pentagi) — credential dumping, privilege escalation, container escape, NTLM relay, automated penetration testing. These are built to attack systems, not to understand or defend them, so they're left out whatever the repo is for. (From `rea`, only the general `reverse-engineer-anything` skill was added — see above; its `rea-*` product-maintenance skills were skipped as not generally useful.)
