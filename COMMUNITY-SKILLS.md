@@ -183,6 +183,19 @@ Added November 2026. These build animations and motion-graphics videos by writin
 
 ---
 
+## Finding skills
+
+### `find-skills`
+**What it does:** A meta-skill for **Claude Code**. Instead of naming a skill, you say the outcome you want and Claude uses the `npx skills` CLI and the [skills.sh](https://skills.sh/) registry to find, combine and install the most suitable skills.
+**Try asking:** *"Find me a skill for writing accessible colour palettes"* — or just describe the job and let it locate the tools.
+**To make it active in Claude Code** (this skill works best installed where Claude Code picks it up automatically), run once:
+```
+npx skills add https://github.com/vercel-labs/skills --skill find-skills
+```
+**Licence:** MIT (vercel-labs).
+
+---
+
 ## Where each skill came from
 
 | Skill(s) | Source repo | Licence |
@@ -208,6 +221,7 @@ Added November 2026. These build animations and motion-graphics videos by writin
 | anidoodle | https://github.com/alexgreensh/anidoodle | Apache 2.0 |
 | huashu-art-motion | https://github.com/alchaincyf/huashu-art-motion | MIT |
 | blender-* (28) | https://github.com/EL4CTEO/blender-skills | MIT |
+| find-skills | https://github.com/vercel-labs/skills | MIT |
 
 Copied in November 2026. To get the latest versions, check the source repos.
 
@@ -221,4 +235,5 @@ From the design lists, these were left out:
 - **More tools, not skills (from the motion/video list):** Manim (Python animation engine), three.quarks (three.js particles), react-postprocessing (React/three.js effects), Tweakpane (a GUI slider library), EffectCraft (a Rust compositor), librosa (Python audio/beat analysis), WhisperX (Python caption timing), FFmpeg (the video encoder the motion skills call to render), and Openverse (a free-media search **API**, not a repo). These are the building blocks the animation skills *use* — install them when a skill asks, rather than adding them here.
 - **No licence file, so not copied:** `remotion-dev/skills` (https://github.com/remotion-dev/skills) — 13 official Remotion video skills, but the repo ships no LICENSE, so there's no clear permission to redistribute them inside this repo. Separately, **Remotion itself is only free for individuals and companies of up to three people** — larger teams need a paid licence. If you want them, install them straight from that repo rather than copying them in.
 - **Needs a hosted vendor service:** `stitch` (https://github.com/google-labs-code/stitch-skills) — 16 well-built skills, but every one depends on **Google Stitch**, so they do nothing without a Stitch account. Left out to keep the collection usable out of the box; grab them from the source repo if you start using Stitch.
+- **A whole AGPL-licensed application, better kept standalone:** **OpenMontage** (https://github.com/OpenMontageInc/OpenMontage) — a genuine, impressive open-source agentic video-production system with ~92 skills. Not vendored in because it's licensed **GNU AGPL-3.0** (strong copyleft, unlike the MIT/Apache skills here — mixing it in pulls those obligations into the repo), it's a full application rather than a drop-in skill set, and many of its skills are paid-API wrappers or face-swap / AI-avatar (deepfake-capable) tools. Clone it as its own project instead: `git clone https://github.com/OpenMontageInc/OpenMontage`.
 - **Offensive-security / exploitation toolkits — not added on safety grounds:** **reverse-skill** (https://github.com/zhaoxuya520/reverse-skill) and **PentAGI** (https://github.com/vxcontrol/pentagi) — credential dumping, privilege escalation, container escape, NTLM relay, automated penetration testing. These are built to attack systems, not to understand or defend them, so they're left out whatever the repo is for. (From `rea`, only the general `reverse-engineer-anything` skill was added — see above; its `rea-*` product-maintenance skills were skipped as not generally useful.)
