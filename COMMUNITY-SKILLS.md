@@ -1,6 +1,6 @@
 # Community skills: design, 3D, games and simulation
 
-These skills were copied from other people's open-source GitHub repos into this one. They cover **web and UI design**, the jobs Fusion 360-style CAD software does (designing parts to 3D print), building 3D games, simulating robots, and reverse engineering compiled software. Each one is described below in plain English, with an example of what you could ask for and how it could be used in class.
+These skills were copied from other people's open-source GitHub repos into this one. They cover **web and UI design**, the jobs Fusion 360-style CAD software does (designing parts to 3D print), building 3D games, simulating robots, reverse engineering compiled software, animation and motion video, and 3D with Blender. Each one is described below in plain English, with an example of what you could ask for and how it could be used in class.
 
 > **Before you use them:** community skills are written by individuals (or companies), not Anthropic. Read the `SKILL.md` and any scripts in a folder before using it on school machines. Most need Python, Node, or other free tools installed. They work best in **Claude Code**. In the Claude app you can upload a skill's folder as a custom skill.
 >
@@ -136,6 +136,53 @@ Start with **`threejs-game-director`**. It plans the game and calls on the other
 
 ---
 
+## Animation, motion and video (from code)
+
+Added November 2026. These build animations and motion-graphics videos by writing code, rather than in a timeline editor. They overlap a fair bit — `cinetic`, `motionmaxxing`, `anidoodle` and `huashu-art-motion` can all direct a short motion film — so try one and drop the rest if you don't need them. Most render final video with **FFmpeg** (free; see the note at the bottom), and some can follow a soundtrack or narration.
+
+### `reanimate`
+**What it does:** Rebuilds an animation you show it — a live site, a screen recording, an mp4/gif, a Lottie file — frame by frame into your own code, then records the result so you can compare.
+**Try asking:** *"Recreate the loading animation in this screen recording as a self-contained HTML/CSS file."*
+**In class:** teaching how an effect actually works by reconstructing it. **Licence:** MIT (Niaz Morshed).
+
+### `motion-design`
+**What it does:** Applies professional timing and easing (the feel a trained animator gives motion) to web/UI animation.
+**Try asking:** *"Animate this card list appearing with natural, staggered easing."*
+**In class:** the difference good timing makes. **Licence:** MIT (LottieFiles).
+
+### `cinetic`
+**What it does:** Directs, builds and renders premium motion films from code — launch videos, product/feature clips, logo stings, UI walkthroughs, teasers.
+**Try asking:** *"Make a 15-second launch video for our robotics club with a logo sting and kinetic text."*
+**Licence:** MIT (Leonxlnx).
+
+### `motionmaxxing`
+**What it does:** Similar to cinetic — builds professional motion-graphics films (promos, reveals, kinetic type, social ads) aiming for a senior-designer feel rather than generic output.
+**Try asking:** *"Turn these three feature bullet points into a punchy 20-second promo."*
+**Licence:** Apache 2.0 (Tejash Makwana).
+
+### `anidoodle`
+**What it does:** Code-drawn stills, films, 3D motion graphics, explainers and web animations in 32 styles, with optional music, narration and subtitles.
+**Try asking:** *"Make a 30-second doodle-style explainer of how an ultrasonic sensor works, with narration."*
+**In class:** animated explainers for any subject. **Licence:** Apache 2.0 (Alex Greenshpun).
+
+### `huashu-art-motion`
+**What it does:** Art-style video animation — 36+ hand-made styles plus narration-driven explainer formats. **Note:** this skill's instructions are written in **Chinese**. Claude can still follow them and produce English output, but the skill files themselves aren't in English.
+**Try asking:** *"Animate this diagram in an ink-painting style with an English voiceover script."*
+**Licence:** MIT (alchaincyf).
+
+---
+
+## 3D with Blender (28 skills that work together)
+
+`blender-core`, `blender-scene-setup`, `blender-modeling` and hard-surface, `blender-sculpting`, `blender-retopology-uv`, `blender-texturing`/`-pbr-materials`/`-texture-baking`, `blender-character-rigging`, `blender-facial-shapekeys`, `blender-hair-grooming`, `blender-clothing`, `blender-animation`, `blender-simulation`, `blender-geometry-nodes`, `blender-lighting-lookdev`, `blender-rendering`, `blender-stylized-npr`, `blender-weather-fx`, `blender-time-of-day`, `blender-environment-kits`, `blender-export-pipelines`, `blender-game-optimization`, `blender-video-editing`, `blender-addon-development`, `blender-pipeline-automation`, `blender-asset-qa`, `blender-workflow-recipes`.
+
+**What they do:** Drive **Blender** (the free, professional 3D suite) for modelling, sculpting, rigging, animation, simulation, materials, lighting, rendering and export. Start with `blender-core`; the others build on it.
+**Try asking:** *"In Blender, set up a studio-lit scene, import our robot model, and render a turntable animation."*
+**In class:** 3D design and animation, visualising robot/CAD models, game assets, and senior media projects. Pairs with the CAD and Three.js skills.
+**Needs:** Blender installed (free); works live via a Blender MCP server or headless from the command line. **Licence:** MIT (EL4CTEO).
+
+---
+
 ## Where each skill came from
 
 | Skill(s) | Source repo | Licence |
@@ -154,6 +201,13 @@ Start with **`threejs-game-director`**. It plans the game and calls on the other
 | leonardo-colors | https://github.com/adobe/leonardo | Apache 2.0 |
 | astryx | https://github.com/meta/astryx | MIT |
 | reverse-engineer-anything | https://github.com/morluto/rea | MIT |
+| reanimate | https://github.com/NiazMorshed2007/reanimate | MIT |
+| motion-design | https://github.com/LottieFiles/motion-design-skill | MIT |
+| cinetic | https://github.com/Leonxlnx/cinetic | MIT |
+| motionmaxxing | https://github.com/Tejashmakwana/motionmaxxing | Apache 2.0 |
+| anidoodle | https://github.com/alexgreensh/anidoodle | Apache 2.0 |
+| huashu-art-motion | https://github.com/alchaincyf/huashu-art-motion | MIT |
+| blender-* (28) | https://github.com/EL4CTEO/blender-skills | MIT |
 
 Copied in November 2026. To get the latest versions, check the source repos.
 
@@ -164,5 +218,7 @@ Copied in November 2026. To get the latest versions, check the source repos.
 From the design lists, these were left out:
 
 - **Not actually skills — they're libraries, tools or apps with no `SKILL.md`, so there's nothing to "add" as a skill:** Tailwind CSS, shadcn/ui *(the library itself — but the `shadcn` skill that drives it WAS added)*, Lucide (icon set), Rough.js (hand-drawn graphics library), WebGL Fluid Simulation (a demo), Excalidraw and tldraw (drawing apps — tldraw ships skills, but only for developing tldraw itself), Figma Context MCP (an MCP server — connect it as a connector instead), and `rembg` (a Python background-removal tool — run it directly). `frontend-design` was already in this repo (identical to upstream), so it wasn't duplicated.
+- **More tools, not skills (from the motion/video list):** Manim (Python animation engine), three.quarks (three.js particles), react-postprocessing (React/three.js effects), Tweakpane (a GUI slider library), EffectCraft (a Rust compositor), librosa (Python audio/beat analysis), WhisperX (Python caption timing), FFmpeg (the video encoder the motion skills call to render), and Openverse (a free-media search **API**, not a repo). These are the building blocks the animation skills *use* — install them when a skill asks, rather than adding them here.
+- **No licence file, so not copied:** `remotion-dev/skills` (https://github.com/remotion-dev/skills) — 13 official Remotion video skills, but the repo ships no LICENSE, so there's no clear permission to redistribute them inside this repo. Separately, **Remotion itself is only free for individuals and companies of up to three people** — larger teams need a paid licence. If you want them, install them straight from that repo rather than copying them in.
 - **Needs a hosted vendor service:** `stitch` (https://github.com/google-labs-code/stitch-skills) — 16 well-built skills, but every one depends on **Google Stitch**, so they do nothing without a Stitch account. Left out to keep the collection usable out of the box; grab them from the source repo if you start using Stitch.
 - **Offensive-security / exploitation toolkits — not added on safety grounds:** **reverse-skill** (https://github.com/zhaoxuya520/reverse-skill) and **PentAGI** (https://github.com/vxcontrol/pentagi) — credential dumping, privilege escalation, container escape, NTLM relay, automated penetration testing. These are built to attack systems, not to understand or defend them, so they're left out whatever the repo is for. (From `rea`, only the general `reverse-engineer-anything` skill was added — see above; its `rea-*` product-maintenance skills were skipped as not generally useful.)
